@@ -88,6 +88,18 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
 )
 
 #exp_entry(
+  "Universidad de Chile",
+  "BCI & Machine Learning Research Project",
+  "2023 – 2024",
+  "Santiago, Chile",
+  (
+    [Developed a multi-threaded Python desktop application (Tkinter, Emotiv Cortex API) for real-time EEG telemetry acquisition (Emotiv EPOC+) and synchronized visual stimuli for mental command training.],
+    [Designed experimental protocols and conducted empirical trials with 30 participants, capturing and structuring brainwave datasets across 7 distinct mental commands.],
+    [Built non-linear dimensionality reduction pipelines using Autoencoders (Deep Learning) and PCA, evaluating clustering techniques to accelerate cross-user BCI transfer learning.]
+  )
+)
+
+#exp_entry(
   "Perceptron SpA",
   "Software & Data Science Engineering Intern",
   "December 2022 – January 2023",
@@ -131,7 +143,7 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
   column-gutter: 0.8em,
   row-gutter: 0.4em,
   [*Programming Languages:*], [Python, SQL, C\#, JavaScript, C, Java, HTML/CSS.],
-  [*ML & Data Science:*], [Pandas, NumPy, BCI/EEG, SVM, Random Forest.],
+  [*ML & Data Science:*], [Pandas, NumPy, BCI/EEG, SVM, Random Forest, Autoencoders, PCA, Clustering.],
   [*Web & 3D Development:*], [Django, React, Vue.js, TCP Sockets, Unity 3D (C\#), Unity 6, Tailwind CSS.],
   [*Databases:*], [PostgreSQL, MySQL, SQL Server, SQLite, MongoDB.],
   [*Cloud & DevOps:*], [AWS (EC2, Route 53, Rekognition), Docker, Nginx, Linux (Daemons, Shell), Windows, Raspberry Pi.],
