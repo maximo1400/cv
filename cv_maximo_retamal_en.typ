@@ -1,0 +1,139 @@
+#set page(
+  paper: "us-letter",
+  margin: (x: 1.6cm, top: 1.4cm, bottom: 1.4cm),
+)
+
+#set text(
+  font: "Fira Sans",
+  size: 9pt,
+  fill: rgb("#1f2937"),
+  lang: "en"
+)
+
+#set par(justify: true, leading: 0.48em)
+
+// Color Palette
+#let primary = rgb("#1e3a8a")    // Deep Navy
+#let secondary = rgb("#2563eb")  // Accent Blue
+#let dark = rgb("#111827")       // Dark Neutral
+#let gray = rgb("#4b5563")       // Muted Text
+
+// Custom section header
+#let section_heading(title) = {
+  v(0.4em)
+  text(weight: "bold", size: 10.5pt, fill: primary)[#upper(title)]
+  v(-0.4em)
+  line(length: 100%, stroke: 1.2pt + primary)
+  v(0.15em)
+}
+
+// Experience entry
+#let exp_entry(company, role, dates, location, bullets) = {
+  block(width: 100%, breakable: false)[
+    #grid(
+      columns: (1fr, auto),
+      [
+        #text(weight: "bold", size: 9.5pt, fill: dark)[#role]
+        #h(4pt) #text(fill: secondary)[|] #h(4pt)
+        #text(weight: "medium", fill: primary)[#company]
+      ],
+      [
+        #text(size: 8.5pt, fill: gray, style: "italic")[#dates #if location != "" [• #location]]
+      ]
+    )
+    #v(-0.25em)
+    #list(
+      marker: [•],
+      body-indent: 0.4em,
+      spacing: 0.35em,
+      ..bullets.map(b => text(size: 8.8pt)[#b])
+    )
+  ]
+  v(0.1em)
+}
+
+// Header
+#align(center)[
+  #text(size: 19pt, weight: "bold", fill: primary)[MÁXIMO RETAMAL ROJAS] \
+  #v(0.15em)
+  #text(size: 10.5pt, weight: "medium", fill: secondary)[Computer Science Engineering, Degree Candidate | Universidad de Chile] \
+  #v(0.25em)
+  #text(size: 8.5pt, fill: dark)[
+    Las Condes, Santiago, Chile #h(6pt) | #h(6pt)
+    +56 9 7382 1580 #h(6pt) | #h(6pt)
+    #link("mailto:maximo.retamal.r@gmail.com")[maximo.retamal.r\@gmail.com] #h(6pt) | #h(6pt)
+    #link("https://github.com/maximo1400")[github.com/maximo1400]
+  ]
+]
+
+#v(0.1em)
+
+// Profile
+#section_heading("Professional Profile")
+Computer Science Engineering degree candidate at Universidad de Chile, specializing in software engineering, Data Science, Machine Learning, and distributed architectures. Proven experience building real-time data pipelines, integrating Affective Computing and Brain-Computer Interfaces (BCI) into 3D environments (Unity/Python), full-stack web development (Django/React), and cloud deployments (AWS, Docker). Passionate about technology, cybersecurity, and solving complex engineering challenges.
+
+// Experience
+#section_heading("Professional Experience & Projects")
+
+#exp_entry(
+  "Universidad de Chile",
+  "Bachelor’s Thesis / Capstone Engineering Project",
+  "August 2025 – 2026",
+  "Santiago, Chile",
+  (
+    [Designed and implemented a Python pipeline for real-time ingestion and filtering of electroencephalographic (EEG - Emotiv EPOC+) signals and processing of biometric datasets (DREAMER).],
+    [Extracted frequency-domain features (Band Power, FFT, Butterworth IIR filters, DC removal) and trained ML models (SVM, Random Forest) to classify emotional states (Valence & Arousal).],
+    [Developed temporal smoothing modules (circular buffers, EMA) and asynchronous streaming via TCP sockets to Unity 3D (C\#), dynamically adapting the graphical environment (audio, lighting, and interactive guidance).]
+  )
+)
+
+#exp_entry(
+  "Perceptron SpA",
+  "Software & Data Science Engineering Intern",
+  "December 2022 – January 2023",
+  "Santiago, Chile",
+  (
+    [Developed a Django/React web dashboard for production data management and predictive weight/slaughter models (Agrosuper), implementing asynchronous task queue tracking in backend and database.],
+    [Built Python data transformation pipelines (hierarchical structures & dictionaries) in collaboration with mathematical engineers to feed linear optimization models for raw material recipes (*Cecinamix*).],
+    [Refactored price elasticity calculation engines (*Revenew*) to compute store-branch-level metrics, and managed cloud deployments on AWS (EC2, Route 53), Docker, and Nginx.]
+  )
+)
+
+#exp_entry(
+  "Wisetrack Corp",
+  "Software Engineering Intern",
+  "January 2020 – March 2020",
+  "Santiago, Chile",
+  (
+    [Translated SQL Server stored procedures to PostgreSQL for cleaning and structuring telemetry alerts in the *Third Eye* driver safety platform.],
+    [Programmed a Python ETL daemon on a Linux VM to extract, transform, and replicate telemetry data into PostgreSQL and MySQL every 10 seconds.],
+    [Stabilized and modularized facial recognition microservices (*MOBICUA*), integrated AWS Rekognition, evaluated IBM Watson AI services, and built analytics dashboards in Qlik Sense.]
+  )
+)
+
+// Education
+#section_heading("Education")
+#grid(
+  columns: (1fr, auto),
+  [
+    #text(weight: "bold", size: 9.5pt, fill: dark)[Bachelor of Science & Engineering Degree in Computer Science] \
+    #text(size: 8.8pt, fill: primary)[Universidad de Chile — Faculty of Physical and Mathematical Sciences (FCFM)]
+  ],
+  [
+    #text(size: 8.5pt, fill: gray, style: "italic")[2016 – 2026 (Degree Candidate) • Santiago, Chile]
+  ]
+)
+
+// Skills
+#section_heading("Technical Skills")
+#grid(
+  columns: (auto, 1fr),
+  column-gutter: 0.8em,
+  row-gutter: 0.4em,
+  [*Programming Languages:*], [Python, SQL, C\#, JavaScript, C, Java, HTML/CSS.],
+  [*ML & Data Science:*], [Pandas, NumPy, BCI/EEG, SVM, Random Forest.],
+  [*Web & 3D Development:*], [Django, React, Vue.js, TCP Sockets, Unity 3D (C\#), Unity 6, Tailwind CSS.],
+  [*Databases:*], [PostgreSQL, MySQL, SQL Server, SQLite, MongoDB.],
+  [*Cloud & DevOps:*], [AWS (EC2, Route 53, Rekognition), Docker, Nginx, Linux (Daemons, Shell), Windows, Raspberry Pi.],
+  [*Languages:*], [Spanish (Native), English (Advanced).]
+)
