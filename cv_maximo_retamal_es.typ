@@ -1,16 +1,16 @@
 #set page(
   paper: "us-letter",
-  margin: (x: 1.6cm, top: 1.4cm, bottom: 1.4cm),
+  margin: (x: 1.5cm, top: 1.1cm, bottom: 1.1cm),
 )
 
 #set text(
   font: "Fira Sans",
-  size: 9pt,
+  size: 8.7pt,
   fill: rgb("#1f2937"),
   lang: "es"
 )
 
-#set par(justify: true, leading: 0.48em)
+#set par(justify: true, leading: 0.45em)
 
 // Color Palette
 #let primary = rgb("#1e3a8a")    // Deep Navy
@@ -20,11 +20,11 @@
 
 // Custom section header
 #let section_heading(title) = {
-  v(0.4em)
-  text(weight: "bold", size: 10.5pt, fill: primary)[#upper(title)]
-  v(-0.4em)
-  line(length: 100%, stroke: 1.2pt + primary)
-  v(0.15em)
+  v(0.3em)
+  text(weight: "bold", size: 10pt, fill: primary)[#upper(title)]
+  v(-0.45em)
+  line(length: 100%, stroke: 1.1pt + primary)
+  v(0.1em)
 }
 
 // Experience entry
@@ -33,32 +33,32 @@
     #grid(
       columns: (1fr, auto),
       [
-        #text(weight: "bold", size: 9.5pt, fill: dark)[#role]
+        #text(weight: "bold", size: 9.2pt, fill: dark)[#role]
         #h(4pt) #text(fill: secondary)[|] #h(4pt)
         #text(weight: "medium", fill: primary)[#company]
       ],
       [
-        #text(size: 8.5pt, fill: gray, style: "italic")[#dates #if location != "" [• #location]]
+        #text(size: 8.3pt, fill: gray, style: "italic")[#dates #if location != "" [• #location]]
       ]
     )
-    #v(-0.25em)
+    #v(-0.35em)
     #list(
       marker: [•],
-      body-indent: 0.4em,
-      spacing: 0.35em,
-      ..bullets.map(b => text(size: 8.8pt)[#b])
+      body-indent: 0.35em,
+      spacing: 0.28em,
+      ..bullets.map(b => text(size: 8.5pt)[#b])
     )
   ]
-  v(0.1em)
+  v(0.05em)
 }
 
 // Header
 #align(center)[
-  #text(size: 19pt, weight: "bold", fill: primary)[MÁXIMO RETAMAL ROJAS] \
-  #v(0.15em)
-  #text(size: 10.5pt, weight: "medium", fill: secondary)[Egresado de Ingeniería Civil en Computación | Universidad de Chile] \
-  #v(0.25em)
-  #text(size: 8.5pt, fill: dark)[
+  #text(size: 17pt, weight: "bold", fill: primary)[MÁXIMO CLEMENTE DESIDERIO RETAMAL ROJAS] \
+  #v(0.12em)
+  #text(size: 10pt, weight: "medium", fill: secondary)[Egresado de Ingeniería Civil en Computación | Universidad de Chile] \
+  #v(0.2em)
+  #text(size: 8.3pt, fill: dark)[
     Las Condes, Santiago, Chile #h(6pt) | #h(6pt)
     +56 9 7382 1580 #h(6pt) | #h(6pt)
     #link("mailto:maximo.retamal.r@gmail.com")[maximo.retamal.r\@gmail.com] #h(6pt) | #h(6pt)
@@ -66,11 +66,11 @@
   ]
 ]
 
-#v(0.1em)
+#v(0.05em)
 
 // Profile
 #section_heading("Perfil Profesional")
-Egresado de Ingeniería Civil en Computación de la Universidad de Chile con especialización en desarrollo de software, Data Science, Machine Learning y arquitecturas distribuidas. Experiencia en la construcción de pipelines de datos en tiempo real, integración de Computación Afectiva e interfaces cerebro-computador (BCI) en entornos 3D (Unity/Python), desarrollo web full-stack (Django/React) y despliegue en la nube (AWS, Docker). Apasionado por la tecnología, la ciberseguridad y la resolución de problemas complejos.
+Egresado de Ingeniería Civil en Computación de la Universidad de Chile con especialización en desarrollo de software, Data Science, Machine Learning y arquitecturas distribuidas. Experiencia en la construcción de pipelines de datos en tiempo real, integración de Computación Afectiva e interfaces cerebro-computador (BCI) en entornos 3D (Unity/Python), desarrollo web full-stack (Django/React/Vue.js) y despliegue en la nube (AWS, Docker). Apasionado por la tecnología, la ciberseguridad y la resolución de problemas complejos.
 
 // Experience
 #section_heading("Experiencia Profesional y Proyectos")
@@ -112,6 +112,18 @@ Egresado de Ingeniería Civil en Computación de la Universidad de Chile con esp
 )
 
 #exp_entry(
+  "Fundación Arturo López Pérez (FALP)",
+  "Desarrollador Frontend",
+  "Marzo 2022 – Julio 2022",
+  "Santiago",
+  (
+    [Desarrollo de interfaz web reactiva y componentes modulares en Vue.js para una plataforma informativa y de comunidad de apoyo a pacientes con cáncer de mama.],
+    [Implementación de módulos multimedia para visualización y reproducción de blogs, videos y audios educativos, integrando un sistema interactivo de comentarios.],
+    [Integración de canales de comunicación directa y mensajería orientados a la resolución de dudas asistenciales con personal médico y gestores clínicos de la fundación.]
+  )
+)
+
+#exp_entry(
   "Wisetrack Corp",
   "Práctica I — Software & Bases de Datos",
   "Enero 2020 – Marzo 2020",
@@ -128,11 +140,11 @@ Egresado de Ingeniería Civil en Computación de la Universidad de Chile con esp
 #grid(
   columns: (1fr, auto),
   [
-    #text(weight: "bold", size: 9.5pt, fill: dark)[Ingeniería Civil en Computación] \
-    #text(size: 8.8pt, fill: primary)[Universidad de Chile — Facultad de Ciencias Físicas y Matemáticas (FCFM)]
+    #text(weight: "bold", size: 9.2pt, fill: dark)[Ingeniería Civil en Computación] \
+    #text(size: 8.5pt, fill: primary)[Universidad de Chile — Facultad de Ciencias Físicas y Matemáticas (FCFM)]
   ],
   [
-    #text(size: 8.5pt, fill: gray, style: "italic")[2016 – 2026 (En proceso de titulación) • Santiago]
+    #text(size: 8.3pt, fill: gray, style: "italic")[2016 – 2026 (En proceso de titulación) • Santiago]
   ]
 )
 
@@ -141,10 +153,10 @@ Egresado de Ingeniería Civil en Computación de la Universidad de Chile con esp
 #grid(
   columns: (auto, 1fr),
   column-gutter: 0.8em,
-  row-gutter: 0.4em,
+  row-gutter: 0.35em,
   [*Lenguajes:*], [Python, SQL, C\#, JavaScript, C, Java, HTML/CSS.],
   [*ML & Data Science:*], [Pandas, NumPy, BCI/EEG, SVM, Random Forest, Autoencoders, PCA, Clustering.],
-  [*Web & 3D:*], [Django, React, Vue.js, Sockets TCP, Unity 3D (C\#), Unity 6, Tailwind CSS.],
+  [*Web & 3D:*], [Vue.js, Django, React, Sockets TCP, Unity 3D (C\#), Unity 6, Tailwind CSS.],
   [*Bases de Datos:*], [PostgreSQL, MySQL, SQL Server, SQLite, MongoDB.],
   [*Cloud & DevOps:*], [AWS (EC2, Route 53, Rekognition), Docker, Nginx, Linux (Daemons, Shell), Windows, Raspberry Pi.],
   [*Idiomas:*], [Español (Nativo), Inglés (Avanzado).]

@@ -1,16 +1,16 @@
 #set page(
   paper: "us-letter",
-  margin: (x: 1.6cm, top: 1.4cm, bottom: 1.4cm),
+  margin: (x: 1.5cm, top: 1.1cm, bottom: 1.1cm),
 )
 
 #set text(
   font: "Fira Sans",
-  size: 9pt,
+  size: 8.7pt,
   fill: rgb("#1f2937"),
   lang: "en"
 )
 
-#set par(justify: true, leading: 0.48em)
+#set par(justify: true, leading: 0.45em)
 
 // Color Palette
 #let primary = rgb("#1e3a8a")    // Deep Navy
@@ -20,11 +20,11 @@
 
 // Custom section header
 #let section_heading(title) = {
-  v(0.4em)
-  text(weight: "bold", size: 10.5pt, fill: primary)[#upper(title)]
-  v(-0.4em)
-  line(length: 100%, stroke: 1.2pt + primary)
-  v(0.15em)
+  v(0.3em)
+  text(weight: "bold", size: 10pt, fill: primary)[#upper(title)]
+  v(-0.45em)
+  line(length: 100%, stroke: 1.1pt + primary)
+  v(0.1em)
 }
 
 // Experience entry
@@ -33,32 +33,32 @@
     #grid(
       columns: (1fr, auto),
       [
-        #text(weight: "bold", size: 9.5pt, fill: dark)[#role]
+        #text(weight: "bold", size: 9.2pt, fill: dark)[#role]
         #h(4pt) #text(fill: secondary)[|] #h(4pt)
         #text(weight: "medium", fill: primary)[#company]
       ],
       [
-        #text(size: 8.5pt, fill: gray, style: "italic")[#dates #if location != "" [• #location]]
+        #text(size: 8.3pt, fill: gray, style: "italic")[#dates #if location != "" [• #location]]
       ]
     )
-    #v(-0.25em)
+    #v(-0.35em)
     #list(
       marker: [•],
-      body-indent: 0.4em,
-      spacing: 0.35em,
-      ..bullets.map(b => text(size: 8.8pt)[#b])
+      body-indent: 0.35em,
+      spacing: 0.28em,
+      ..bullets.map(b => text(size: 8.5pt)[#b])
     )
   ]
-  v(0.1em)
+  v(0.05em)
 }
 
 // Header
 #align(center)[
-  #text(size: 19pt, weight: "bold", fill: primary)[MÁXIMO RETAMAL ROJAS] \
-  #v(0.15em)
-  #text(size: 10.5pt, weight: "medium", fill: secondary)[Computer Science Engineering, Degree Candidate | Universidad de Chile] \
-  #v(0.25em)
-  #text(size: 8.5pt, fill: dark)[
+  #text(size: 17pt, weight: "bold", fill: primary)[MÁXIMO CLEMENTE DESIDERIO RETAMAL ROJAS] \
+  #v(0.12em)
+  #text(size: 10pt, weight: "medium", fill: secondary)[Computer Science Engineering, Degree Candidate | Universidad de Chile] \
+  #v(0.2em)
+  #text(size: 8.3pt, fill: dark)[
     Las Condes, Santiago, Chile #h(6pt) | #h(6pt)
     +56 9 7382 1580 #h(6pt) | #h(6pt)
     #link("mailto:maximo.retamal.r@gmail.com")[maximo.retamal.r\@gmail.com] #h(6pt) | #h(6pt)
@@ -66,11 +66,11 @@
   ]
 ]
 
-#v(0.1em)
+#v(0.05em)
 
 // Profile
 #section_heading("Professional Profile")
-Computer Science Engineering degree candidate at Universidad de Chile, specializing in software engineering, Data Science, Machine Learning, and distributed architectures. Proven experience building real-time data pipelines, integrating Affective Computing and Brain-Computer Interfaces (BCI) into 3D environments (Unity/Python), full-stack web development (Django/React), and cloud deployments (AWS, Docker). Passionate about technology, cybersecurity, and solving complex engineering challenges.
+Computer Science Engineering degree candidate at Universidad de Chile, specializing in software engineering, Data Science, Machine Learning, and distributed architectures. Proven experience building real-time data pipelines, integrating Affective Computing and Brain-Computer Interfaces (BCI) into 3D environments (Unity/Python), full-stack web development (Django/React/Vue.js), and cloud deployments (AWS, Docker). Passionate about technology, cybersecurity, and solving complex engineering challenges.
 
 // Experience
 #section_heading("Professional Experience & Projects")
@@ -112,6 +112,18 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
 )
 
 #exp_entry(
+  "Fundación Arturo López Pérez (FALP)",
+  "Frontend Developer",
+  "March 2022 – July 2022",
+  "Santiago, Chile",
+  (
+    [Developed a responsive, component-based web frontend in Vue.js for an educational and community support platform for breast cancer patients.],
+    [Implemented multimedia modules for streaming and publishing educational blogs, videos, and audio content, complete with an interactive commenting system.],
+    [Built direct messaging interfaces and inquiry submission flows connecting patients with clinical case managers and medical staff for healthcare guidance.]
+  )
+)
+
+#exp_entry(
   "Wisetrack Corp",
   "Software Engineering Intern",
   "January 2020 – March 2020",
@@ -128,11 +140,11 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
 #grid(
   columns: (1fr, auto),
   [
-    #text(weight: "bold", size: 9.5pt, fill: dark)[Bachelor of Science & Engineering Degree in Computer Science] \
-    #text(size: 8.8pt, fill: primary)[Universidad de Chile — Faculty of Physical and Mathematical Sciences (FCFM)]
+    #text(weight: "bold", size: 9.2pt, fill: dark)[Bachelor of Science & Engineering Degree in Computer Science] \
+    #text(size: 8.5pt, fill: primary)[Universidad de Chile — Faculty of Physical and Mathematical Sciences (FCFM)]
   ],
   [
-    #text(size: 8.5pt, fill: gray, style: "italic")[2016 – 2026 (Degree Candidate) • Santiago, Chile]
+    #text(size: 8.3pt, fill: gray, style: "italic")[2016 – 2026 (Degree Candidate) • Santiago, Chile]
   ]
 )
 
@@ -141,10 +153,10 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
 #grid(
   columns: (auto, 1fr),
   column-gutter: 0.8em,
-  row-gutter: 0.4em,
+  row-gutter: 0.35em,
   [*Programming Languages:*], [Python, SQL, C\#, JavaScript, C, Java, HTML/CSS.],
   [*ML & Data Science:*], [Pandas, NumPy, BCI/EEG, SVM, Random Forest, Autoencoders, PCA, Clustering.],
-  [*Web & 3D Development:*], [Django, React, Vue.js, TCP Sockets, Unity 3D (C\#), Unity 6, Tailwind CSS.],
+  [*Web & 3D Development:*], [Vue.js, Django, React, TCP Sockets, Unity 3D (C\#), Unity 6, Tailwind CSS.],
   [*Databases:*], [PostgreSQL, MySQL, SQL Server, SQLite, MongoDB.],
   [*Cloud & DevOps:*], [AWS (EC2, Route 53, Rekognition), Docker, Nginx, Linux (Daemons, Shell), Windows, Raspberry Pi.],
   [*Languages:*], [Spanish (Native), English (Advanced).]
