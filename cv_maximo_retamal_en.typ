@@ -7,7 +7,7 @@
   font: "Fira Sans",
   size: 8.7pt,
   fill: rgb("#1f2937"),
-  lang: "en"
+  lang: "en",
 )
 
 #set par(justify: true, leading: 0.45em)
@@ -39,14 +39,14 @@
       ],
       [
         #text(size: 8.3pt, fill: gray, style: "italic")[#dates #if location != "" [• #location]]
-      ]
+      ],
     )
     #v(-0.35em)
     #list(
       marker: [•],
       body-indent: 0.35em,
       spacing: 0.28em,
-      ..bullets.map(b => text(size: 8.5pt)[#b])
+      ..bullets.map(b => text(size: 8.5pt)[#b]),
     )
   ]
   v(0.05em)
@@ -56,7 +56,11 @@
 #align(center)[
   #text(size: 17pt, weight: "bold", fill: primary)[MÁXIMO CLEMENTE DESIDERIO RETAMAL ROJAS] \
   #v(0.12em)
-  #text(size: 10pt, weight: "medium", fill: secondary)[Computer Science Engineering, Degree Candidate | Universidad de Chile] \
+  #text(
+    size: 10pt,
+    weight: "medium",
+    fill: secondary,
+  )[Computer Science Engineering, Degree Candidate | Universidad de Chile] \
   #v(0.2em)
   #text(size: 8.3pt, fill: dark)[
     Las Condes, Santiago, Chile #h(6pt) | #h(6pt)
@@ -70,7 +74,7 @@
 
 // Profile
 #section_heading("Professional Profile")
-Computer Science Engineering degree candidate at Universidad de Chile, specializing in software engineering, Data Science, Machine Learning, and distributed architectures. Proven experience building real-time data pipelines, integrating Affective Computing and Brain-Computer Interfaces (BCI) into 3D environments (Unity/Python), full-stack web development (Django/React/Vue.js), and cloud deployments (AWS, Docker). Passionate about technology, cybersecurity, and solving complex engineering challenges.
+Computer Science Engineering degree candidate at Universidad de Chile, specializing in software engineering, Data Science, Machine Learning, and distributed architectures. Proven experience building real-time data pipelines, integrating Affective Computing and Brain-Computer Interfaces (BCI) into 3D environments (Unity/Python), full-stack web development (Django/Vue.js), and cloud deployments (AWS, Docker). Main areas of interest include software engineering, cybersecurity, and human-computer interaction (HCI), with a passion for solving complex engineering challenges.
 
 // Experience
 #section_heading("Professional Experience & Projects")
@@ -83,8 +87,8 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
   (
     [Designed and implemented a Python pipeline for real-time ingestion and filtering of electroencephalographic (EEG - Emotiv EPOC+) signals and processing of biometric datasets (DREAMER).],
     [Extracted frequency-domain features (Band Power, FFT, Butterworth IIR filters, DC removal) and trained ML models (SVM, Random Forest) to classify emotional states (Valence & Arousal).],
-    [Developed temporal smoothing modules (circular buffers, EMA) and asynchronous streaming via TCP sockets to Unity 3D (C\#), dynamically adapting the graphical environment (audio, lighting, and interactive guidance).]
-  )
+    [Developed temporal smoothing modules (circular buffers, EMA) and asynchronous streaming via TCP sockets to Unity 3D (C\#), dynamically adapting the graphical environment (audio, lighting, and interactive guidance).],
+  ),
 )
 
 #exp_entry(
@@ -95,8 +99,8 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
   (
     [Developed a multi-threaded Python desktop application (Tkinter, Emotiv Cortex API) for real-time EEG telemetry acquisition (Emotiv EPOC+) and synchronized visual stimuli for mental command training.],
     [Designed experimental protocols and conducted empirical trials with 30 participants, capturing and structuring brainwave datasets across 7 distinct mental commands.],
-    [Built non-linear dimensionality reduction pipelines using Autoencoders (Deep Learning) and PCA, evaluating clustering techniques to accelerate cross-user BCI transfer learning.]
-  )
+    [Built non-linear dimensionality reduction pipelines using Autoencoders (Deep Learning) and PCA, evaluating clustering techniques to accelerate cross-user BCI transfer learning.],
+  ),
 )
 
 #exp_entry(
@@ -107,8 +111,8 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
   (
     [Developed a Django/React web dashboard for production data management and predictive weight/slaughter models (Agrosuper), implementing asynchronous task queue tracking in backend and database.],
     [Built Python data transformation pipelines (hierarchical structures & dictionaries) in collaboration with mathematical engineers to feed linear optimization models for raw material recipes (*Cecinamix*).],
-    [Refactored price elasticity calculation engines (*Revenew*) to compute store-branch-level metrics, and managed cloud deployments on AWS (EC2, Route 53), Docker, and Nginx.]
-  )
+    [Refactored price elasticity calculation engines (*Revenew*) to compute store-branch-level metrics, and managed cloud deployments on AWS (EC2, Route 53), Docker, and Nginx.],
+  ),
 )
 
 #exp_entry(
@@ -119,8 +123,8 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
   (
     [Developed a responsive, component-based web frontend in Vue.js for an educational and community support platform for breast cancer patients.],
     [Implemented multimedia modules for streaming and publishing educational blogs, videos, and audio content, complete with an interactive commenting system.],
-    [Built direct messaging interfaces and inquiry submission flows connecting patients with clinical case managers and medical staff for healthcare guidance.]
-  )
+    [Built direct messaging interfaces and inquiry submission flows connecting patients with clinical case managers and medical staff for healthcare guidance.],
+  ),
 )
 
 #exp_entry(
@@ -131,8 +135,8 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
   (
     [Translated SQL Server stored procedures to PostgreSQL for cleaning and structuring telemetry alerts in the *Third Eye* driver safety platform.],
     [Programmed a Python ETL daemon on a Linux VM to extract, transform, and replicate telemetry data into PostgreSQL and MySQL every 10 seconds.],
-    [Stabilized and modularized facial recognition microservices (*MOBICUA*), integrated AWS Rekognition, evaluated IBM Watson AI services, and built analytics dashboards in Qlik Sense.]
-  )
+    [Stabilized and modularized facial recognition microservices (*MOBICUA*), integrated AWS Rekognition, evaluated IBM Watson AI services, and built analytics dashboards in Qlik Sense.],
+  ),
 )
 
 // Education
@@ -145,7 +149,7 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
   ],
   [
     #text(size: 8.3pt, fill: gray, style: "italic")[2016 – 2026 (Degree Candidate) • Santiago, Chile]
-  ]
+  ],
 )
 
 // Skills
@@ -156,8 +160,8 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
   row-gutter: 0.35em,
   [*Programming Languages:*], [Python, SQL, C\#, JavaScript, C, Java, HTML/CSS.],
   [*ML & Data Science:*], [Pandas, NumPy, BCI/EEG, SVM, Random Forest, Autoencoders, PCA, Clustering.],
-  [*Web & 3D Development:*], [Vue.js, Django, React, TCP Sockets, Unity 3D (C\#), Unity 6, Tailwind CSS.],
+  [*Web & 3D Development:*], [Vue.js, Django, TCP Sockets, Unity 3D (C\#), Unity 6, Tailwind CSS.],
   [*Databases:*], [PostgreSQL, MySQL, SQL Server, SQLite, MongoDB.],
-  [*Cloud & DevOps:*], [AWS (EC2, Route 53, Rekognition), Docker, Nginx, Linux (Daemons, Shell), Windows, Raspberry Pi.],
-  [*Languages:*], [Spanish (Native), English (Advanced).]
+  [*Cloud & DevOps:*], [AWS (EC2, Route 53), Docker, Nginx, Linux (Daemons, Shell), Windows, Raspberry Pi.],
+  [*Languages:*], [Spanish (Native), English (Advanced).],
 )
