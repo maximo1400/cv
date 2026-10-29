@@ -60,7 +60,7 @@
     size: 10pt,
     weight: "medium",
     fill: secondary,
-  )[Computer Science Engineering, Degree Candidate | Universidad de Chile] \
+  )[Computer Science Engineer | Universidad de Chile] \
   #v(0.2em)
   #text(size: 8.3pt, fill: dark)[
     Las Condes, Santiago, Chile #h(6pt) | #h(6pt)
@@ -74,7 +74,7 @@
 
 // Profile
 #section_heading("Professional Profile")
-Computer Science Engineering degree candidate at Universidad de Chile, specializing in software engineering, Data Science, Machine Learning, and distributed architectures. Proven experience building real-time data pipelines, integrating Affective Computing and Brain-Computer Interfaces (BCI) into 3D environments (Unity/Python), full-stack web development (Django/Vue.js), and cloud deployments (AWS, Docker). Main areas of interest include software engineering, cybersecurity, and human-computer interaction (HCI), with a passion for solving complex engineering challenges.
+Computer Science Engineer from Universidad de Chile, specializing in software engineering, Data Science, Machine Learning, and distributed architectures. Proven experience building real-time data pipelines, integrating Affective Computing and Brain-Computer Interfaces (BCI) into 3D environments (Unity/Python), full-stack web development (Django/Vue.js), and cloud deployments (AWS, Docker). Main areas of interest include software engineering, cybersecurity, and human-computer interaction (HCI), with a passion for solving complex engineering challenges.
 
 // Experience
 #section_heading("Professional Experience & Projects")
@@ -144,11 +144,13 @@ Computer Science Engineering degree candidate at Universidad de Chile, specializ
 #grid(
   columns: (1fr, auto),
   [
-    #text(weight: "bold", size: 9.2pt, fill: dark)[Bachelor of Science & Engineering Degree in Computer Science] \
+    #text(weight: "bold", size: 9.2pt, fill: dark)[Bachelor of Science & Engineering Degree in Computer Science] #h(
+      4pt,
+    ) #text(size: 8.5pt, weight: "medium", fill: secondary)[(Highest Distinction)] \
     #text(size: 8.5pt, fill: primary)[Universidad de Chile — Faculty of Physical and Mathematical Sciences (FCFM)]
   ],
   [
-    #text(size: 8.3pt, fill: gray, style: "italic")[2016 – 2026 (Degree Candidate) • Santiago, Chile]
+    #text(size: 8.3pt, fill: gray, style: "italic")[2016 - 2026 • Santiago, Chile]
   ],
 )
 

@@ -60,7 +60,7 @@
     size: 10pt,
     weight: "medium",
     fill: secondary,
-  )[Egresado de Ingeniería Civil en Computación | Universidad de Chile] \
+  )[Ingeniero Civil en Computación | Universidad de Chile] \
   #v(0.2em)
   #text(size: 8.3pt, fill: dark)[
     Las Condes, Santiago, Chile #h(6pt) | #h(6pt)
@@ -74,7 +74,7 @@
 
 // Profile
 #section_heading("Perfil Profesional")
-Egresado de Ingeniería Civil en Computación de la Universidad de Chile con especialización en desarrollo de software, Data Science, Machine Learning y arquitecturas distribuidas. Experiencia en la construcción de pipelines de datos en tiempo real, integración de Computación Afectiva e interfaces cerebro-computador (BCI) en entornos 3D (Unity/Python), desarrollo web full-stack (Django/Vue.js) y despliegue en la nube (AWS, Docker). Entre mis áreas de interés destacan la ingeniería de software, la ciberseguridad y la interacción humano-computador, con pasión por la resolución de problemas complejos.
+Ingeniero Civil en Computación titulado de la Universidad de Chile, con especialización en desarrollo de software, Data Science, Machine Learning y arquitecturas distribuidas. Experiencia en la construcción de pipelines de datos en tiempo real, integración de Computación Afectiva e interfaces cerebro-computador (BCI) en entornos 3D (Unity/Python), desarrollo web full-stack (Django/Vue.js) y despliegue en la nube (AWS, Docker). Entre mis áreas de interés destacan la ingeniería de software, la ciberseguridad y la interacción humano-computador, con pasión por la resolución de problemas complejos.
 
 // Experience
 #section_heading("Experiencia Profesional y Proyectos")
@@ -144,11 +144,15 @@ Egresado de Ingeniería Civil en Computación de la Universidad de Chile con esp
 #grid(
   columns: (1fr, auto),
   [
-    #text(weight: "bold", size: 9.2pt, fill: dark)[Ingeniería Civil en Computación] \
+    #text(weight: "bold", size: 9.2pt, fill: dark)[Ingeniería Civil en Computación] #h(4pt) #text(
+      size: 8.5pt,
+      weight: "medium",
+      fill: secondary,
+    )[(Distinción Máxima)] \
     #text(size: 8.5pt, fill: primary)[Universidad de Chile — Facultad de Ciencias Físicas y Matemáticas (FCFM)]
   ],
   [
-    #text(size: 8.3pt, fill: gray, style: "italic")[2016 – 2026 (En proceso de titulación) • Santiago]
+    #text(size: 8.3pt, fill: gray, style: "italic")[2016 - 2026 • Santiago]
   ],
 )
 
